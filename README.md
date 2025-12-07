@@ -56,6 +56,11 @@ The `fromPath` method returns a `Dunn\FitReader\DTO\FitActivity` object. Here is
 echo "Start Time: " . $activity->startTime->format('Y-m-d H:i:s');
 echo "Total Distance: " . $activity->totalDistanceMeters . " meters";
 echo "Total Duration: " . $activity->totalDurationSeconds . " seconds";
+
+// Device Metadata
+echo "Manufacturer ID: " . $activity->manufacturer;
+echo "Product ID: " . $activity->product;
+echo "Serial Number: " . $activity->serialNumber;
 ```
 
 #### Records (Time Series Data)

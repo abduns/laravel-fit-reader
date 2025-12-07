@@ -51,6 +51,12 @@ class FitReaderService implements FitReader
 
     protected function mapToDto(FitFileParser $parser): FitActivity
     {
+        // 0. Extract File ID
+        $fileId = $parser->data_mesgs['file_id']['public'][0] ?? [];
+        $manufacturer = $fileId['manufacturer'] ?? null;
+        $product = $fileId['product'] ?? null;
+        $serialNumber = $fileId['serial_number'] ?? null;
+
         // 1. Extract Session Data (Summary)
         $session = $parser->data_mesgs['session']['public'][0] ?? []; // Usually one session per file
 
@@ -93,7 +99,10 @@ class FitReaderService implements FitReader
             totalDistanceMeters: $totalDistance,
             totalDurationSeconds: $totalDuration,
             records: $records,
-            laps: $laps
+            laps: $laps,
+            manufacturer: $manufacturer,
+            product: $product,
+            serialNumber: $serialNumber,
         );
     }
 

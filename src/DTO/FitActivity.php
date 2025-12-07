@@ -17,5 +17,8 @@ class FitActivity
         public float $totalDurationSeconds,
         public Collection $records,
         public Collection $laps,
+        public ?int $manufacturer = null,
+        public ?int $product = null,
+        public ?int $serialNumber = null,
     ) {}
 }
