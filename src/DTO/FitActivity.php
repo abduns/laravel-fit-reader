@@ -58,6 +58,12 @@ class FitActivity
      */
     public function toJson(int $options = 0): string
     {
-        return json_encode($this->toArray(), $options);
+        $json = json_encode($this->toArray(), $options);
+        
+        if ($json === false) {
+            throw new \RuntimeException('Failed to encode activity to JSON: ' . json_last_error_msg());
+        }
+        
+        return $json;
     }
 }
