@@ -65,6 +65,8 @@ class FitReaderService implements FitReader
 
         $totalDistance = $session['total_distance'] ?? 0.0;
         $totalDuration = $session['total_timer_time'] ?? 0.0;
+        $sport = $session['sport'] ?? null;
+        $subSport = $session['sub_sport'] ?? null;
 
         // 2. Extract Records
         $recordsData = $parser->data_mesgs['record']['public'] ?? [];
@@ -103,6 +105,8 @@ class FitReaderService implements FitReader
             manufacturer: $manufacturer,
             product: $product,
             serialNumber: $serialNumber,
+            sport: $sport,
+            subSport: $subSport,
         );
     }
 

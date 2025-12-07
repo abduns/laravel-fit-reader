@@ -5,6 +5,19 @@ All notable changes to `laravel-fit-reader` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-12-08
+
+### Added
+- Added `sport` and `subSport` properties to `FitActivity` DTO to detect activity types (running, cycling, swimming, etc.)
+- Added `getSportName()` method to `FitActivity` for human-readable sport type names
+- Added `toArray()` and `toJson()` methods to all DTOs (`FitActivity`, `FitRecord`, `FitLap`) for raw data export
+- Added comprehensive PEST tests using example FIT files from `src/examples/`
+- Added support for detecting 49 different sport types based on FIT SDK specification
+
+### Improved
+- Enhanced Profile definitions to include sport and sub_sport fields in session messages
+- Test coverage now includes activity type detection, data completeness verification, and raw data export
+
 ## [1.1.0] - 2025-12-08
 
 ### Added
