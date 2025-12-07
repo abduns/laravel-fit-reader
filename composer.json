@@ -1,6 +1,18 @@
 {
     "name": "abduns/laravel-fit-reader",
     "description": "A focused Laravel 12 package to read Garmin .fit activity files.",
+    "keywords": [
+        "laravel",
+        "fit",
+        "garmin",
+        "fitness",
+        "activity",
+        "parser",
+        "fit-reader",
+        "workout",
+        "training"
+    ],
+    "homepage": "https://github.com/abduns/laravel-fit-reader",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -9,6 +21,10 @@
             "email": "werk@abduns.com"
         }
     ],
+    "support": {
+        "issues": "https://github.com/abduns/laravel-fit-reader/issues",
+        "source": "https://github.com/abduns/laravel-fit-reader"
+    },
     "require": {
         "php": "^8.2",
         "illuminate/support": "^12.0",
