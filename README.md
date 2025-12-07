@@ -5,7 +5,7 @@
 
 A focused, developer-friendly Laravel package to read and parse Garmin `.fit` activity files.
 
-This package provides a clean wrapper around `adriangibbons/php-fit-file-analysis`, converting raw FIT data into easy-to-use Data Transfer Objects (DTOs). It's perfect for building fitness apps, training logs, or analysis tools.
+This package provides a native PHP implementation for parsing FIT files, converting raw data into easy-to-use Data Transfer Objects (DTOs). It's perfect for building fitness apps, training logs, or analysis tools without external binary dependencies.
 
 ## ✨ Features
 
