@@ -220,6 +220,18 @@ return [
 composer test
 ```
 
+## 📝 Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## 🚀 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 🔖 Versioning
+
+This package follows [Semantic Versioning](https://semver.org/). For information on how to release new versions, see [RELEASING.md](RELEASING.md).
+
 ## 📄 License
 
-The MIT License (MIT).
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
