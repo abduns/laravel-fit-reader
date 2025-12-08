@@ -57,4 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PHP 8.2 or higher
 - Laravel 12.x
 
+[Unreleased]: https://github.com/abduns/laravel-fit-reader/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/abduns/laravel-fit-reader/releases/tag/v1.2.0
+[1.1.0]: https://github.com/abduns/laravel-fit-reader/releases/tag/v.1.1.0
 [1.0.0]: https://github.com/abduns/laravel-fit-reader/releases/tag/v1.0.0
