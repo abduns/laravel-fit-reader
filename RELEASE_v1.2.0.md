@@ -129,3 +129,5 @@ MIT License - see [LICENSE](https://github.com/abduns/laravel-fit-reader/blob/ma
 - Enhanced Profile definitions to include sport fields
 
 **Full Changelog**: https://github.com/abduns/laravel-fit-reader/compare/v.1.1.0...v1.2.0
+
+*Note: The v1.1.0 tag uses the format `v.1.1.0` (historical naming issue). All future releases will use the correct format `vX.Y.Z`.*
