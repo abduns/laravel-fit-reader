@@ -57,6 +57,10 @@ echo "Start Time: " . $activity->startTime->format('Y-m-d H:i:s');
 echo "Total Distance: " . $activity->totalDistanceMeters . " meters";
 echo "Total Duration: " . $activity->totalDurationSeconds . " seconds";
 
+// Sport Type (new in v1.2.0)
+echo "Sport: " . $activity->getSportName(); // e.g., "running", "cycling", "swimming"
+echo "Sport ID: " . $activity->sport; // Raw sport type ID
+
 // Device Metadata
 echo "Manufacturer ID: " . $activity->manufacturer;
 echo "Product ID: " . $activity->product;
@@ -128,6 +132,53 @@ class ActivityController extends Controller
         ]);
     }
 }
+```
+
+### Exporting Data
+
+**New in v1.2.0**: You can export activity data as raw arrays or JSON for easy storage or API responses.
+
+```php
+// Export entire activity as array
+$array = $activity->toArray();
+
+// Export as JSON
+$json = $activity->toJson();
+
+// Export with pretty print
+$prettyJson = $activity->toJson(JSON_PRETTY_PRINT);
+
+// Export individual records
+foreach ($activity->records as $record) {
+    $recordArray = $record->toArray();
+    $recordJson = $record->toJson();
+}
+
+// Export individual laps
+foreach ($activity->laps as $lap) {
+    $lapArray = $lap->toArray();
+    $lapJson = $lap->toJson();
+}
+```
+
+### Detecting Activity Type
+
+**New in v1.2.0**: Automatically detect what type of activity was recorded.
+
+```php
+$activity = FitReader::fromPath('/path/to/run.fit');
+
+if ($activity->getSportName() === 'running') {
+    echo "This is a running activity!";
+    // Access running-specific data
+    echo "Average pace: " . /* calculate from records */;
+} elseif ($activity->getSportName() === 'cycling') {
+    echo "This is a cycling activity!";
+}
+
+// Supported sport types include:
+// running, cycling, swimming, walking, hiking, 
+// fitness_equipment, multisport, and 40+ more
 ```
 
 ### Dependency Injection

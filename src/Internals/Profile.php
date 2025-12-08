@@ -22,6 +22,8 @@ class Profile
             'fields' => [
                 253 => ['name' => 'timestamp', 'type' => 'date_time'],
                 2 => ['name' => 'start_time', 'type' => 'date_time'],
+                5 => ['name' => 'sport', 'type' => 'sport'],
+                6 => ['name' => 'sub_sport', 'type' => 'sub_sport'],
                 7 => ['name' => 'total_timer_time', 'type' => 'uint32', 'scale' => 1000, 'units' => 's'],
                 8 => ['name' => 'total_elapsed_time', 'type' => 'uint32', 'scale' => 1000, 'units' => 's'],
                 9 => ['name' => 'total_distance', 'type' => 'uint32', 'scale' => 100, 'units' => 'm'],
