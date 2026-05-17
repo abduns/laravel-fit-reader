@@ -3,7 +3,6 @@
 A focused, developer-friendly Laravel package to read and parse Garmin `.fit` activity files.
 
 [![Tests](https://github.com/abduns/laravel-fit-reader/actions/workflows/tests.yml/badge.svg)](https://github.com/abduns/laravel-fit-reader/actions)
-[![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/abduns/laravel-fit-reader/main/coverage.json)](https://github.com/abduns/laravel-fit-reader)
 [![Version](https://img.shields.io/packagist/v/abduns/laravel-fit-reader.svg)](https://packagist.org/packages/abduns/laravel-fit-reader)
 [![Downloads](https://img.shields.io/packagist/dt/abduns/laravel-fit-reader.svg)](https://packagist.org/packages/abduns/laravel-fit-reader)
 [![License](https://img.shields.io/packagist/l/abduns/laravel-fit-reader.svg)](LICENSE.md)
