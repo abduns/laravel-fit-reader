@@ -1,6 +1,6 @@
 {
     "name": "abduns/laravel-fit-reader",
-    "description": "A focused Laravel 12 package to read Garmin .fit activity files.",
+    "description": "A focused Laravel package to read Garmin .fit activity files.",
     "keywords": [
         "laravel",
         "fit",
@@ -27,13 +27,13 @@
     },
     "require": {
         "php": "^8.2",
-        "illuminate/support": "^12.0",
-        "illuminate/http": "^12.0"
+        "illuminate/support": "^12.0|^13.0",
+        "illuminate/http": "^12.0|^13.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^10.0",
-        "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-laravel": "^3.0"
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
     },
     "autoload": {
         "psr-4": {

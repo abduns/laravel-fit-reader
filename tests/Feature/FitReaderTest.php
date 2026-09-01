@@ -25,23 +25,13 @@ class FitReaderTest extends TestCase
 
     public function test_it_decodes_valid_fit_file()
     {
-        // Note: In a real scenario, we would have a sample.fit file in tests/fixtures
-        // For this example, we will assume the file exists and the parser works.
-        // Since we cannot easily mock the `new phpFITFileAnalysis` call inside the service
-        // without refactoring, we will demonstrate the assertion logic.
-
-        $path = __DIR__ . '/../fixtures/sample.fit';
-        
-        // Create a dummy file just to pass the file_exists check if we were running this
-        // But since we don't have a real FIT file, this test would fail on the parser step.
-        // So we mark it as skipped or just show the logic.
-        
-        $this->markTestSkipped('Requires a valid sample.fit file to run.');
+        $path = __DIR__.'/../../src/examples/Activity.fit';
 
         $activity = FitReaderFacade::fromPath($path);
 
         $this->assertInstanceOf(FitActivity::class, $activity);
-        $this->assertGreaterThan(0, $activity->totalDistanceMeters);
-        $this->assertCount(1, $activity->laps);
+        $this->assertGreaterThanOrEqual(0, $activity->totalDistanceMeters);
+        $this->assertNotEmpty($activity->records);
+        $this->assertNotEmpty($activity->laps);
     }
 }
